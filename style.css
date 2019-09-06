@@ -1,0 +1,31 @@
+#body {
+    margin: 0 auto;
+    background-color: yellow;
+    text-align: center;
+    height: 90vh;
+    width: 90vw;
+  }
+  
+  .header {
+      padding-top: 5vh;
+  }
+  
+  .quote {
+    text-align: center;
+    margin: 0 30px;
+  }
+  
+  .niceText {
+    text-align: center;
+    width: 65vw;
+    margin: 0 auto;
+  }
+  
+  #clickMeHandler {
+    position: absolute;
+    background-color: coral;
+    width: 60vw;
+    height: 10vh;
+    bottom: 10vh;
+    right: 20vw;
+  }
