@@ -1,6 +1,7 @@
-// let niceThingsList = ["nice", "wow", "way to be!", ":)", "lookin good!", "wowie-no!", "bae-beano", "that's a rock fact!", "oh my!", "I will take an attention please!", "this is going to be an example of a longer string of text - this won't be in production but I wanna see if it works well here in dev!"];
+let niceThingsList = [
+    "nice", "wow", "way to be!", ":)", "lookin good!", "wowie-no!", "bae-beano", "that's a rock fact!", "oh my!", "I will take an attention please!", "you are cute!", "I'll continue to add to this list, so don't worry if you see the same nice thing :)", "i hope you're day is extra cool beans", "baby-beano she is a baby beano!", "let's move to Seattle and start a salsa company!", "did you know that you are cute?"];
 
-let niceThingsList = ["one", "two"];
+// let niceThingsList = ["one", "two"];
 
 let lastIndex;
 let randomIndex;
@@ -8,28 +9,17 @@ let randomIndex;
 const clickMeHandler = document.getElementById("clickMeHandler");
 
 let randomIndexGenerator = () => {
-  let listLength = niceThingsList.length
-  randomIndex = Math.floor(Math.random() * listLength)
+  randomIndex = Math.floor(Math.random() * niceThingsList.length)
   
-  if(randomIndex == lastIndex) {
-    
-  }
-  
-}
-
-let preventRandomDuplication = () => {
-  if(randomIndex == lastIndex) {
-    console.log('repeat!')
-  } else if (randomIndex != lastIndex) {
-    console.log('new index!')
+  if(randomIndex !== lastIndex) {
+    lastIndex = randomIndex
+  } else {
+    randomIndexGenerator()
   }
 }
 
 const randomizer = () => {
-  randomIndex = randomIndexGenerator()
-  
-  console.log(randomIndex)
-  
+  randomIndexGenerator()
   let randomNiceThing = niceThingsList[randomIndex]  
   let niceThing = document.getElementById("niceThing")
   niceThing.innerHTML = randomNiceThing
