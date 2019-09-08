@@ -10,7 +10,7 @@ You only need to clone the repo :)
 
 ## Deployment
 
-This project will be deployed on Heroku shortly.
+The live project lives here: https://n8ers.github.io/nice-things/.
 
 ## Author
 
